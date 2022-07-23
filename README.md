@@ -22,7 +22,7 @@ Meridian Board - LITE - に搭載したESP32DevkitCで使える他,
  　　 プラス方向60度→マイナス方向120度→プラス方向60度→センターで約２秒停止, という動きを繰り返します.  
   
 #### ピンアサインは以下の通りです.  
-<img width="400" alt="SS 2380" src="https://user-images.githubusercontent.com/8329123/180610578-e3c3789b-d0c0-4d4b-a6f0-79706188a41a.png">  
+<img width="400" alt="SS 2381" src="https://user-images.githubusercontent.com/8329123/180610583-7db88a6d-a2e5-4185-b453-799409a147b4.png">  
   
 **Meridian Board -LITE- 使用時のPin Assign**  (ボードのICS_Rにサーボの黒線がGNDとなるよう接続してください.)  
   RX :ESP32 pin16 Serial2 :Meridian Board -LITE- ICS_R / ICS変換基板 TX  
@@ -32,7 +32,8 @@ Meridian Board - LITE - に搭載したESP32DevkitCで使える他,
   GND:ESP32 GND           :Meridian Board -LITE- GND   / ICS変換基板 GND  
   
   
-<img width="400" alt="SS 2381" src="https://user-images.githubusercontent.com/8329123/180610583-7db88a6d-a2e5-4185-b453-799409a147b4.png">  
+  
+<img width="400" alt="SS 2380" src="https://user-images.githubusercontent.com/8329123/180610578-e3c3789b-d0c0-4d4b-a6f0-79706188a41a.png">  
   
 **ESP32DevkitC単体 Pin Assign**  
   TX :ESP32 pin17 Serial2 :FUTABA RS30x Servo SIGNAL(WHITE/RED&WING)  
