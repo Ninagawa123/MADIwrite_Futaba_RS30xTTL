@@ -62,5 +62,6 @@ int ResDealy = 128;
   
 // [6] ファクトリーリセットしますか？　（0:no 1:yes)  
 int AllReset = 0;  
+  
 ------------  
   
