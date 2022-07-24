@@ -53,16 +53,16 @@ PlatformIO用のmain.cppファイルですが、内容を.inoファイルにコ�
 |0x03:28.800|0x07:115,200 |0x0B:691,200|
   
 // [1] 目標とする通信速度を選んでください. (上図参照)  
-unsigned char TARGET_BAUD_RATE = 0x0B;  
+unsigned char TARGET_BAUD_RATE = 0x07;  
   
 // [2] マディライトしますか？ 0:no 1:yes (全通信速度を網羅する書き込み)  
-bool USE_MADIWRITE = 1;  
+bool USE_MADIWRITE = 0;  
   
 // [3] IDを何番に書き換えますか？　（番号 1~127. 書き換えない場合は0.)  
 int NewID = 0;  
   
 // [4] サーボの回転方向は？　（0:正転, 時計回りが+となる. 1:逆転. 2以上:設定しない)  
-int CW = 0;  
+int CW = 2;  
   
 // [5] 返信ディレイタイムは？　（0~127. 100μs + 50μs x 数値. 1msなら18　128以上:設定しない)  
 int ResDealy = 128;  
