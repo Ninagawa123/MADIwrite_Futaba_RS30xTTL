@@ -1,5 +1,5 @@
 
-// "MADI write for ESP32 RS30x" 2022.07.24 by Izumi Ninagawa
+// "MADI write for ESP32 RS30x" 2022.07.23 by Izumi Ninagawa
 // 参考)https://www.futaba.co.jp/product/robot/robot_download/sample_programs
 //     https://d21xsz2za2b5mz.cloudfront.net/6716/1905/0042/RS303MR_RS304MD_118.pdf
 
@@ -46,7 +46,7 @@
 unsigned char TARGET_BAUD_RATE = 0x0B;
 
 // [2] マディライトしますか？ 0:no 1:yes (全通信速度を網羅する書き込み)
-bool USE_MADIWRITE = 1;
+bool USE_MADIWRITE = 0;
 
 // [3] IDを何番に書き換えますか？　（番号 1~127. 書き換えない場合は0.)
 int NewID = 0;
@@ -54,7 +54,7 @@ int NewID = 0;
 // [4] サーボの回転方向設定は？　（0:正転, 時計回りが+となる. 1:逆転. 2以上:設定しない)
 int CW = 2;
 
-// [5] 返信ディレイタイムは？　（1~127. 100μs + 50μs x 数値. 1msなら18　128以上:設定しない)
+// [5] 返信ディレイタイムは？　（0~127. 100μs + 50μs x 数値. 1msなら18　128以上:設定しない)
 int ResDealy = 0;
 
 // [6] ファクトリーリセットしますか？　（0:no 1:yes)
@@ -578,7 +578,7 @@ void RS30x_Read_Data(unsigned char id, unsigned char add, unsigned char len)
     }
     Serial.print("         ID : ");
     Serial.println(IDdatraw[5]);
-    Serial.print("    Rotatio : ");
+    Serial.print("   Rotation : ");
     if (IDdatraw[6] == 0)
     {
         Serial.println("Foward, CW");
