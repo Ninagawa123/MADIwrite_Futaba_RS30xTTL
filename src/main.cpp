@@ -55,10 +55,13 @@ int NewID = 0;
 int CW = 2;
 
 // [5] 返信ディレイタイムは？　（0~127. 100μs + 50μs x 数値. 1msなら18　128以上:設定しない)
-int ResDealy = 0;
+int ResDealy = 128;
 
 // [6] ファクトリーリセットしますか？　（0:no 1:yes)
 int AllReset = 0;
+
+// [7] 使用環境は？　（0:ESP32DevkitCのみ 1:ESP32+Meridian Board -LITE- or ICS変換基板）
+int Device = 0; // 1 の場合は返信をシリアルモニタで表示します.
 
 // ******************************** 設定はここまで ************************************
 
@@ -660,7 +663,10 @@ void setup()
     RS30x_Torque(255, 0x01); // ID = 1(0x01) , RS30x_Torque = ON   (0x01)
     delay(1000);
 
-    RS30x_Read_Data(0xFF, 0x04, 0x04); // ID, Addres, Length 接続されたサーボの情報を表示
+    if (Device == 1) // 半二重回路がある場合にはシリアルモニタにサーボ情報を表示
+    {
+        RS30x_Read_Data(0xFF, 0x04, 0x04); // ID, Addres, Length 接続されたサーボの情報を表示
+    }
 }
 
 void loop()
