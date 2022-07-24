@@ -11,8 +11,13 @@ Meridian Board - LITE - に搭載したESP32DevkitCで使える他,
   
 その他, サーボID書き換え, 通信方向の正逆設定, 応答時間の短縮設定などが可能です.  
   
-PlatformIO用のmain.cppファイルですが、内容を.inoファイルにコピーすればArduinoIDE系でも使えると思います。  
-  
+# 対応開発環境  
+* PlatformIO  
+* ArduinoIDE  
+* ESP32DevkitC (送信, 書き換えのみ)  
+* ESP32DevkitC + Meridian Board - LITE -　(受信可)  
+* ESP32DevkitC + ICS変換基板　(受信可)  
+* その他、Arduino系の基板はピンや使用シリアルを変更することで使えると思います.  
   
 # 使い方  
 （１）ソースコード前半の変数設定に希望の状態を設定します. 詳細については変数欄のコメントをご覧ください.  
