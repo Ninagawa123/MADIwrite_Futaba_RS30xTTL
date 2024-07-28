@@ -1,4 +1,4 @@
-# MADIwrite_Futaba_RS30xTTL  
+# [MADIwrite_Futaba_RS30xTTL](https://github.com/Ninagawa123/MADIwrite_Futaba_RS30xTTL)  
   
 "MADIwrite_Futaba_RS30xTTL" はFUTABAのRS303MD, RS304MD, RS306MDなどの  
 半二重TTLサーボの設定変更用プログラムです.  
