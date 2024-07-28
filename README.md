@@ -11,7 +11,7 @@ Meridian Board - LITE - に搭載したESP32DevkitCで使える他,
   
 その他, サーボID書き換え, 通信方向の正逆設定, 応答時間の短縮設定などが可能です.  
   
-# 対応開発環境  
+## 対応開発環境  
 * PlatformIO  
 * ArduinoIDE  
 * ESP32DevkitC (送信, 書き換えのみ)  
@@ -19,7 +19,7 @@ Meridian Board - LITE - に搭載したESP32DevkitCで使える他,
 * ESP32DevkitC + ICS変換基板　(受信可)  
 * その他、Arduino系の基板はピンや使用シリアルを変更することで使えると思います.  
   
-# 使い方  
+## 使い方  
 （１）ソースコード前半の変数設定に希望の状態を設定します. 詳細については変数欄のコメントをご覧ください.  
 （２）後述のピンアサインを参考に, ESP32またはMeridian Board -LITE-とRS30x系サーボ"１個"を接続してください.  
 　　　Meridian Board -LITE-にサーボを接続する際は, ICS_Rピンにサーボの黒線が外側になるように接続してください.  
@@ -28,7 +28,7 @@ Meridian Board - LITE - に搭載したESP32DevkitCで使える他,
 （５）書き換えが終了すると, サーボが動き始めます.  
  　　 プラス方向60度→マイナス方向120度→プラス方向60度→センターで約２秒停止, という動きを繰り返します.  
   
-#### ピンアサインは以下の通りです.  
+### ピンアサインは以下の通りです.  
 <img width="400" alt="SS 2381" src="https://user-images.githubusercontent.com/8329123/180610583-7db88a6d-a2e5-4185-b453-799409a147b4.png">  
   
 **Meridian Board -LITE- 使用時のPin Assign**  (ボードのICS_Rにサーボの黒線がGNDとなるよう接続してください.)  
@@ -48,7 +48,7 @@ Meridian Board - LITE - に搭載したESP32DevkitCで使える他,
   GND:[ESP32 5V           ] - [FUTABA RS30x Servo GND   ](BLACK) 
   
   
-#### ソースコード中の下記の変数を設定することで実行内容を決めてください.  
+### ソースコード中の下記の変数を設定することで実行内容を決めてください.  
 ------------  
   
 | | | |
